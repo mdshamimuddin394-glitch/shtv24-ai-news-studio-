@@ -26,17 +26,17 @@ button{padding:12px 20px;background:#0ea5e9;color:#fff;border:none;border-radius
 <div id="output">Output will appear here...</div>
 </div>
 <div class="card">
-<p>© 2026 SHTV24 | Built by Md Shamim Uddin - Maulvibazar | MIT License</p>
+<p>© 2026 SHTV24 | Built by Md Shamim Uddin - Mulvibazar | MIT License</p>
 <a href="https://paypal.me/shtv24" style="color:#ffc439">Donate via PayPal</a>
 </div>
 <script>
-function generate(){
+{ function generate(){
 let t=document.getElementById('newsInput').value;
 let l=document.getElementById('lang').value;
 let o=document.getElementById('output');
-if(l=='bn'){o.innerText='[BANGLA ANCHOR]\n\nআসসালামু আলাইকুম, SHTV24 এ স্বাগতম।\n\n'+t+'\n\nচোখ রাখুন SHTV24 এ।';}
+if(!t){o.innerText='আগে খবর লিখুন ভাই!';return;}
+let d={'Today':'আজ','Bangladesh':'বাংলাদেশ','News':'খবর','Prime Minister':'প্রধানমন্ত্রী','President':'রাষ্ট্রপতি','Port':'বন্দর','Sylhet':'সিলেট','Dhaka':'ঢাকা','Mongla':'মোংলা','Economy':'অর্থনীতি','Test':'টেস্ট'};
+for(let k in d){t=t.split(k).join(d[k]);}
+if(l=='bn'){o.innerText='[BANGLA ANCHOR]\n\nআসসালামু আলাইকুম, SHTV24 এ স্বাগতম।\n\nআজকের প্রধান খবর:\n\n'+t+'\n\nচোখ রাখুন SHTV24 এ।';}
 else{o.innerText='[ENGLISH ANCHOR]\n\nWelcome to SHTV24.\n\n'+t+'\n\nStay tuned.';}
 }
-</script>
-</body>
-</html>
