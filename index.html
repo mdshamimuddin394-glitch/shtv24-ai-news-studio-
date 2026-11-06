@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html><body>
+<html>
+<body style="text-align:center;font-family:Arial">
 <h2>SHTV24 News Studio</h2>
-<textarea id="n" rows="4" cols="35" placeholder="খবর লিখুন"></textarea><br>
+<textarea id="n" rows="4" cols="35" placeholder="খবর লিখুন"></textarea>
+<br><br>
 <button onclick="g()">Generate Script</button>
 <p id="o">Output here...</p>
+<button onclick="c1()">Copy Script</button>
+<br><br>
+<button onclick="c2()">Copy Link</button>
 <script>
-function g(){var t=document.getElementById("n").value;document.getElementById("o").innerText="SHTV24 Breaking: "+t;}
+function g(){document.getElementById("o").innerText="SHTV24 Breaking: "+document.getElementById("n").value;}
+function c1(){navigator.clipboard.writeText(document.getElementById("o").innerText);alert("Script Copy Done!");}
+function c2(){navigator.clipboard.writeText("https://mdshamimuddin394-glitch.github.io/shtv24-ai-news-studio/");alert("Link Copy Done!");}
 </script>
-</body></html
+</body>
+</html>
