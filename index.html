@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html>
-<body style="text-align:center;font-family:Arial">
-<h2>SHTV24 News Studio</h2>
-<textarea id="n" rows="4" cols="35" placeholder="খবর লিখুন"></textarea>
-<br><br>
-<button onclick="g()">Generate Script</button>
-<p id="o">Output here...</p>
-<button onclick="c1()">Copy Script</button>
-<br><br>
-<button onclick="c2()">Copy Link</button>
+<head><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{background:#111;color:white;text-align:center;font-family:Arial;margin:0}
+.top{background:#cc0000;padding:10px;font-size:22px;font-weight:bold}
+.tv{background:#000;border:8px solid #333;border-radius:15px;margin:15px;padding:15px}
+.ticker{background:yellow;color:black;padding:5px;font-weight:bold;margin-top:10px}
+textarea{width:90%;padding:10px;border-radius:8px}
+button{padding:10px 15px;margin:5px;border:none;border-radius:20px;font-weight:bold}
+.b1{background:#cc0000;color:white}
+.b2{background:#00c853;color:white}
+.b3{background:#2962ff;color:white}
+#o{background:white;color:black;padding:12px;border-radius:8px;margin:10px;min-height:60px;text-align:left}
+</style>
+</head>
+<body>
+<div class="top">📺 SHTV24 NEWS STUDIO</div>
+<div class="tv">
+<h2>🎙️ LIVE STUDIO</h2>
+<textarea id="n" rows="3" placeholder="খবর লিখুন..."></textarea><br>
+<button class="b1" onclick="g()">▶ Generate Script</button>
+<div id="o">Output here... Script এখানে আসবে</div>
+<button class="b2" onclick="c1()">📋 Copy Script</button>
+<button class="b3" onclick="share()">📤 Share on Facebook</button>
+<div class="ticker">🔴 BREAKING NEWS • SHTV24 • Sylhet • Moulvibazar •</div>
+</div>
+<p>© 2026 Built by Md Shamim Uddin - Moulvibazar</p>
 <script>
-function g(){document.getElementById("o").innerText="SHTV24 Breaking: "+document.getElementById("n").value;}
+function g(){document.getElementById("o").innerText="🎙️ SHTV24 Breaking: "+document.getElementById("n").value+"\n\nআসসালামু আলাইকুম, দেখছেন SHTV24।";}
 function c1(){navigator.clipboard.writeText(document.getElementById("o").innerText);alert("Script Copy Done!");}
-function c2(){navigator.clipboard.writeText("https://mdshamimuddin394-glitch.github.io/shtv24-ai-news-studio/");alert("Link Copy Done!");}
+function share(){var link="https://mdshamimuddin394-glitch.github.io/shtv24-ai-news-studio/";if(navigator.share){navigator.share({title:"SHTV24",text:"আমার Website দেখেন!",url:link});}else{window.open("https://www.facebook.com/sharer/sharer.php?u="+link);}}
 </script>
 </body>
 </html>
